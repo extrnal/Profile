@@ -2,11 +2,11 @@ body {
     font-family: 'Inter', sans-serif;
 }
 .hero-bg {
-    background-color: #1a202c; /* warna fallback jika gambar gagal dimuat */
-    background-image: url("assets/back.jpg"); /* ganti dengan path gambar kamu */
-    background-size: cover; /* agar gambar menyesuaikan ukuran kontainer */
-    background-position: center; /* posisi gambar di tengah */
-    background-repeat: no-repeat; /* agar tidak diulang */
+    background-color: #1a202c;
+    background-image: url("assets/back.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: auto;
 }
 .section-title {
