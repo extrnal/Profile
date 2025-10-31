@@ -1,1 +1,173 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Graduate - Bagas Petualang !</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles\style.css"
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-8 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Bagas Petualang !</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#tentang" class="text-gray-600 md: flex hover:text-blue-600 transition duration-300">Tentang Saya</a>
+                <a href="#layanan" class="text-gray-600 hover:text-blue-600 transition duration-300">Layanan</a>
+                <a href="#portofolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portofolio</a>
+                <a href="#kontak" class="text-blue-600 border border-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">Hubungi Saya</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <a href="#tentang" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Tentang Saya</a>
+            <a href="#layanan" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Layanan</a>
+            <a href="#portofolio" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Portofolio</a>
+            <a href="#kontak" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-black py-24 px-1">
+        <div class="container mx-auto text-center">
+            <img src="assets\IMG_1993.jpg" alt="" class="w-40 h-40  rounded-full mx-auto mb-6 border-4 border-gray-400 object-cover">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fresh Graduate Informatika</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">Membantu bisnis Anda bertumbuh di dunia digital melalui strategi yang terukur dan kreatif.</p>
+            <a href="#portofolio" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg">Lihat Hasil Kerja Saya</a>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">Halo, Saya Bagasi Petualang !</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Saya adalah seorang praktisi digital marketing yang siap dalam membantu berbagai skala bisnis, mulai dari UMKM hingga perusahaan besar, untuk meningkatkan visibilitas online dan mencapai target penjualan mereka.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Keahlian saya mencakup Data Analytics, Basic Design dan Content Marketing. Saya percaya bahwa setiap bisnis itu unik, dan karena itu saya selalu merancang strategi yang disesuaikan khusus untuk kebutuhan klien.
+                    </p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold text-lg mb-4 text-center md:text-left">Keahlian Utama:</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-3"></i> Data Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-3"></i> Basic Desgin</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-3"></i> Analisis & Pelaporan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="layanan" class="py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12 section-title">Layanan yang Saya Tawarkan</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-line-chart text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
+                    <p class="text-gray-600">Menganalisis data berfungsi untuk mengoptimasi strategi bisnis kamu di masa mendatang.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-camera-retro text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Basic Design</h3>
+                    <p class="text-gray-600">Merancang visual yang mencakup prinsip, elemen, dan komposisi untuk menciptakan karya yang fungsional, seimbang, dan estetis.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-pencil-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Pemasaran Konten</h3>
+                    <p class="text-gray-600">Membuat konten berkualitas (artikel blog, video, infografis) yang menarik dan relevan bagi target audiens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portofolio -->
+    <section id="portofolio" class="py-20 px-6 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12 section-title">Hasil Kerja & Studi Kasus</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden group">
+                    <img src="assets\ES KOPI.png" alt="Gambar Proyek 1" class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Desain Poster Sederhana</h3>
+                        <p class="text-gray-600 mb-4">Membuat poster sederhana untuk menarik perhatian audience.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Lihat Detail</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden group">
+                    <img src="assets\JASA KELOLA MEDIA SOSIAL.png" alt="Gambar Proyek 2" class="w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Desain Poster Sederhana</h3>
+                        <p class="text-gray-600 mb-4">Membuat poster sederhana untuk menarik perhatian audience.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Lihat Detail</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden group">
+                    <img src="assets\dimsum.png" alt="Gambar Proyek 3" class="w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Desain Poster Sederhana</h3>
+                        <p class="text-gray-600 mb-4">Membuat poster sederhana untuk menarik perhatian audience.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Kontak -->
+    <section id="kontak" class="py-20 px-6 bg-gray-800 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Tertarik Bekerja Sama?</h2>
+            <p class="text-gray-300 max-w-xl mx-auto mb-8">Mari diskusikan bagaimana saya bisa membantu bisnis Anda bertumbuh. Kirimkan saya pesan!</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bagasalif.sch@gmail.com" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg">
+                <i class="fas fa-envelope mr-2"></i> Kirim Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 px-6">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/bagas-a-840736280/" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.instagram.com/actually_gas/" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://wa.me/+6285161366166" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-whatsapp fa-2x"></i></a>
+            </div>
+            <p>&copy; 2025 Bagas Petualang ! - Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script untuk toggle menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

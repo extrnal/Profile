@@ -1,1 +1,16 @@
-
+body {
+    font-family: 'Inter', sans-serif;
+}
+.hero-bg {
+    background-color: #1a202c; /* warna fallback jika gambar gagal dimuat */
+    background-image: url("assets\back.jpg"); /* ganti dengan path gambar kamu */
+    background-size: cover; /* agar gambar menyesuaikan ukuran kontainer */
+    background-position: center; /* posisi gambar di tengah */
+    background-repeat: no-repeat; /* agar tidak diulang */
+    background-size: auto;
+}
+.section-title {
+    border-bottom: 3px solid #4a5568;
+    padding-bottom: 8px;
+    display: inline-block;
+}
