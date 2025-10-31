@@ -3,7 +3,7 @@ body {
 }
 .hero-bg {
     background-color: #1a202c;
-    background-image: url("assets/back.jpg"); 
+    background-image: url("../assets/back.jpg"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
