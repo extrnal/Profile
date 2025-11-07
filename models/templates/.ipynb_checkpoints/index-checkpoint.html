@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klasifikasi Judul Berita</title>
+</head>
+<body>
+    <h2>Klasifikasi Judul Berita</h2>
+    <form method="POST">
+        <label for="judul">Masukkan Judul Berita:</label><br>
+        <input type="text" name="judul" required style="width: 400px;"><br><br>
+        <input type="submit" value="Klasifikasikan">
+    </form>
+
+    {% if result %}
+        <h3>Hasil Prediksi:</h3>
+        <p><strong>Judul:</strong> {{ result.judul }}</p>
+        <p><strong>Prediksi Bagging:</strong> {{ result.bagging }}</p>
+        <p><strong>Prediksi XGBoost:</strong> {{ result.xgb }}</p>
+        <p><strong>Prediksi AdaBoost:</strong> {{ result.ada }}</p>
+    {% endif %}
+</body>
+</html>

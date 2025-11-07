@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Klasifikasi Judul Berita</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #1d1c16;
+        }
+        .container {
+            background: #e3c090;
+            padding: 2em;
+            border-radius: 18px;
+            box-shadow: 0 50px 50px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 650px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 2em;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 1em;
+        }
+        input[type="submit"] {
+            background-color: #697565;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #a08e45;
+        }
+        .result-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse; 
+            text-align: center;
+        }
+        .result-table th, .result-table td {
+            border: 1px solid #ddd; 
+            padding: 12px; 
+            
+        }
+        .result-table th {
+            background-color: #f2f2f2; 
+            color: #333;
+        }
+        .result-table td {
+            background-color: #ECDFCC;
+        }
+        .judul-info {
+            text-align: left;
+            margin-bottom: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Klasifikasi Judul Berita 📰</h2>
+        <form method="POST">
+            <label for="judul">Masukkan Judul Berita:</label><br><br>
+            <input type="text" name="judul" required><br>
+            <input type="submit" value="Klasifikasikan">
+        </form>
+
+        {% if result %}
+            <h3>Hasil Prediksi:</h3>
+            <div class="judul-info">
+                <p><strong>Judul:</strong> {{ result.judul }}</p>
+                <p><strong>Cleaned:</strong> {{ result.cleaned }}</p>
+            </div>
+            
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Model Klasifikasi</th>
+                        <th>🔹 Dengan SMOTE</th>
+                        <th>🔸 Tanpa SMOTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bagging</strong></td>
+                        <td>{{ result.smote.bagging }}</td>
+                        <td>{{ result.nosmote.bagging }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XGBoost</strong></td>
+                        <td>{{ result.smote.xgb }}</td>
+                        <td>{{ result.smote.xgb }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AdaBoost</strong></td>
+                        <td>{{ result.smote.ada }}</td>
+                        <td>{{ result.nosmote.ada }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+</body>
+</html>
